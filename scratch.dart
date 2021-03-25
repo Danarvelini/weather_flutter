@@ -15,7 +15,7 @@ void task1() {
   print('Task 1 completed successfully');
 }
 
-Future task2() async {
+Future<String> task2() async {
   Duration threeSeconds = Duration(seconds: 3);
 
   String result;
