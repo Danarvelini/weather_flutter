@@ -20,9 +20,20 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void getLocation() async {
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.low);
-    print(position);
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low);
+      print(position);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  void somethingThatExpectsLessThan10(int n) {
+    //this is a throw example
+    if (n > 10) {
+      throw 'n is greater than 10, n should be less than 10';
+    }
   }
 
   @override
