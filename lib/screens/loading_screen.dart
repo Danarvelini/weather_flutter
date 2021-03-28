@@ -18,6 +18,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(primary: Colors.red),
           onPressed: () {
             getLocation();
           },
